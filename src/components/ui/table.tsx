@@ -1,7 +1,6 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from './resizable'
 
 const Table = React.forwardRef<
   HTMLTableElement,
@@ -77,6 +76,7 @@ const TableHead = React.forwardRef<
       "h-12 px-4 text-left align-middle font-medium text-black [&:has([role=checkbox])]:pr-0 resize-x overflow-auto",
       className
     )}
+    style={{ userSelect: 'none' }}
     {...props}
   />
 ))

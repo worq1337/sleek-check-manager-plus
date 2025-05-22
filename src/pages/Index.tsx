@@ -3,7 +3,7 @@ import React from 'react';
 import Sidebar from '@/components/Sidebar';
 import ReceiptTable from '@/components/ReceiptTable';
 import TabsNavigation from '@/components/TabsNavigation';
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@/components/ui/resizable';
+import { ResizablePanelGroup, ResizablePanel } from '@/components/ui/resizable';
 
 const Index: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Index: React.FC = () => {
           <TabsNavigation />
           <div className="bg-white rounded-lg shadow overflow-hidden">
             <ResizablePanelGroup direction="horizontal" className="w-full">
-              <ResizablePanel defaultSize={10}>
+              <ResizablePanel defaultSize={100}>
                 <ReceiptTable />
               </ResizablePanel>
             </ResizablePanelGroup>

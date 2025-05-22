@@ -4,6 +4,7 @@ import { useAppContext, Receipt, Tab } from '@/contexts/AppContext';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { ResizableHandle } from '@/components/ui/resizable';
 
+// Add a CSS class for resizable columns instead of using an inline style tag
 const ReceiptTable: React.FC = () => {
   const { activeTab, receipts, selectedReceiptId, setSelectedReceiptId } = useAppContext();
   
@@ -15,26 +16,19 @@ const ReceiptTable: React.FC = () => {
 
   return (
     <div className="w-full overflow-x-auto animate-fade-in">
-      <style jsx global>{`
-        th {
-          resize: horizontal;
-          overflow: auto;
-          min-width: 100px;
-        }
-      `}</style>
       <Table>
         <TableHeader>
           <TableRow className="bg-gray-50">
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">№</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">Д.н</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">Дата</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">Время</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black resize-x overflow-auto">Оператор/продавец</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black resize-x overflow-auto">Приложение</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black resize-x overflow-auto">Сумма</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black resize-x overflow-auto">Остаток</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">ПК</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black resize-x overflow-auto">p2p</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">№</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Д.н</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Дата</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Время</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black">Оператор/продавец</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black">Приложение</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black">Сумма</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black">Остаток</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">ПК</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">p2p</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

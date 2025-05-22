@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,29 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Make table headers resizable */
+  th {
+    resize: horizontal;
+    overflow: auto;
+    min-width: 100px;
+    position: relative;
+  }
+  
+  /* Add a visual handle for resizing */
+  th::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: transparent;
+    cursor: col-resize;
+  }
+  
+  th:hover::after {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
