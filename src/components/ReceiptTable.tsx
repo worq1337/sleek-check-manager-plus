@@ -26,19 +26,19 @@ const ReceiptTable: React.FC = () => {
 
   return (
     <div className="w-full overflow-x-auto animate-fade-in">
-      <table className="w-full border-collapse">
+      <table className="w-full border-collapse table-fixed">
         <thead>
-          <tr className="bg-table-header dark:bg-table-headerDark">
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">№</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">Д.у</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">Дата</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">Время</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Оператор/продавец</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Приложение</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-right">Сумма</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-right">Остаток</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">ПК</th>
-            <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-center">p2p</th>
+          <tr className="bg-gray-50">
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">№</th>
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">Д.у</th>
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">Дата</th>
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">Время</th>
+            <th className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap">Оператор/продавец</th>
+            <th className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap">Приложение</th>
+            <th className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap">Сумма</th>
+            <th className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap">Остаток</th>
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">ПК</th>
+            <th className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap">p2p</th>
           </tr>
         </thead>
         <tbody>
@@ -46,18 +46,18 @@ const ReceiptTable: React.FC = () => {
             <tr 
               key={receipt.id} 
               onClick={() => handleRowClick(receipt.id)}
-              className={`cursor-pointer hover:bg-table-hover dark:hover:bg-table-hoverDark transition-colors ${selectedReceiptId === receipt.id ? 'bg-blue-100 dark:bg-blue-900' : ''}`}
+              className={`cursor-pointer hover:bg-gray-100 transition-colors ${selectedReceiptId === receipt.id ? 'bg-blue-100' : ''}`}
             >
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[0]}`}>{receipt.id}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[1]}`}>{receipt.serviceId}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[2]}`}>{receipt.date}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[3]}`}>{receipt.time}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[4]}`}>{receipt.operator}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[5]}`}>{receipt.application}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[6]}`}>{receipt.amount.toLocaleString()}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[7]}`}>{receipt.balance.toLocaleString()}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[8]}`}>{receipt.pc}</td>
-              <td className={`border border-gray-300 dark:border-gray-600 px-4 py-2 ${columnAlignments[9]}`}>{receipt.p2p}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[0]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.id}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[1]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.serviceId}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[2]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.date}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[3]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.time}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[4]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.operator}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[5]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.application}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[6]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.amount.toLocaleString()}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[7]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.balance.toLocaleString()}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[8]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.pc}</td>
+              <td className={`border border-gray-300 px-4 py-2 ${columnAlignments[9]} whitespace-nowrap overflow-hidden text-ellipsis`}>{receipt.p2p}</td>
             </tr>
           ))}
         </tbody>

@@ -71,9 +71,9 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 w-64 h-screen border-r border-gray-200 dark:border-gray-700 flex flex-col animate-fade-in">
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <h1 className="text-xl font-bold text-gray-800 dark:text-white">Парсер чеков</h1>
+    <div className="bg-white w-64 h-screen border-r border-gray-200 flex flex-col animate-fade-in">
+      <div className="p-4 border-b border-gray-200">
+        <h1 className="text-xl font-bold text-gray-800">Парсер чеков</h1>
       </div>
       
       <div className="flex-1 p-4 space-y-3">
@@ -108,7 +108,7 @@ const Sidebar: React.FC = () => {
         </Dialog>
       </div>
       
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="p-4 border-t border-gray-200">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline" className="w-full justify-start text-left" size="lg">

@@ -4,14 +4,11 @@ import { DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } f
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Switch } from '@/components/ui/switch';
 import { useAppContext } from '@/contexts/AppContext';
-import { useTheme } from '@/components/theme-provider';
 import { useToast } from '@/hooks/use-toast';
 
 const SettingsDialog: React.FC = () => {
   const { openAIKey, setOpenAIKey, telegramToken, setTelegramToken } = useAppContext();
-  const { theme, setTheme } = useTheme();
   const { toast } = useToast();
   
   const [tempOpenAIKey, setTempOpenAIKey] = React.useState(openAIKey);
@@ -34,20 +31,6 @@ const SettingsDialog: React.FC = () => {
       </DialogHeader>
       
       <div className="py-4 space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="space-y-0.5">
-            <Label htmlFor="theme">Темная тема</Label>
-            <div className="text-sm text-gray-500 dark:text-gray-400">
-              Переключение между светлой и темной темой
-            </div>
-          </div>
-          <Switch
-            id="theme"
-            checked={theme === 'dark'}
-            onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-          />
-        </div>
-        
         <div className="space-y-2">
           <Label htmlFor="openai">API OpenAI</Label>
           <div className="relative group">
