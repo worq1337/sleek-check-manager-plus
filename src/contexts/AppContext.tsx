@@ -12,6 +12,7 @@ export type Receipt = {
   balance: number;
   pc: string;
   p2p: string;
+  source?: string; // Added source property as optional
 };
 
 export type Tab = 'telegramBot' | 'sms';
@@ -48,12 +49,12 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     sms: Receipt[];
   }>({
     telegramBot: [
-      { id: 1, serviceId: '001', date: '2024-05-20', time: '10:30', operator: 'Иван Иванов', application: 'Telegram Bot', amount: 1500, balance: 500, pc: 'PC-01', p2p: 'Yes' },
-      { id: 2, serviceId: '002', date: '2024-05-21', time: '11:45', operator: 'Мария Петрова', application: 'Telegram Bot', amount: 2500, balance: 1000, pc: 'PC-02', p2p: 'No' },
+      { id: 1, serviceId: '001', date: '2024-05-20', time: '10:30', operator: 'Иван Иванов', application: 'Telegram Bot', amount: 1500, balance: 500, pc: 'PC-01', p2p: 'Yes', source: '' },
+      { id: 2, serviceId: '002', date: '2024-05-21', time: '11:45', operator: 'Мария Петрова', application: 'Telegram Bot', amount: 2500, balance: 1000, pc: 'PC-02', p2p: 'No', source: '' },
     ],
     sms: [
-      { id: 1, serviceId: '003', date: '2024-05-19', time: '09:15', operator: 'Алексей Сидоров', application: 'SMS Service', amount: 800, balance: 200, pc: 'PC-03', p2p: 'Yes' },
-      { id: 2, serviceId: '004', date: '2024-05-22', time: '14:20', operator: 'Елена Кузнецова', application: 'SMS Service', amount: 1200, balance: 300, pc: 'PC-01', p2p: 'No' },
+      { id: 1, serviceId: '003', date: '2024-05-19', time: '09:15', operator: 'Алексей Сидоров', application: 'SMS Service', amount: 800, balance: 200, pc: 'PC-03', p2p: 'Yes', source: '' },
+      { id: 2, serviceId: '004', date: '2024-05-22', time: '14:20', operator: 'Елена Кузнецова', application: 'SMS Service', amount: 1200, balance: 300, pc: 'PC-01', p2p: 'No', source: '' },
     ]
   });
 
