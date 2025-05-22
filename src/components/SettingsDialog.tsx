@@ -27,12 +27,12 @@ const SettingsDialog: React.FC = () => {
   return (
     <DialogContent className="sm:max-w-md bg-white">
       <DialogHeader>
-        <DialogTitle>Настройки</DialogTitle>
+        <DialogTitle className="text-black">Настройки</DialogTitle>
       </DialogHeader>
       
       <div className="py-4 space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="openai">API OpenAI</Label>
+          <Label htmlFor="openai" className="text-black">API OpenAI</Label>
           <div className="relative group">
             <Input
               id="openai"
@@ -46,7 +46,7 @@ const SettingsDialog: React.FC = () => {
         </div>
         
         <div className="space-y-2">
-          <Label htmlFor="telegram">Telegram Token</Label>
+          <Label htmlFor="telegram" className="text-black">Telegram Token</Label>
           <div className="relative group">
             <Input
               id="telegram"
@@ -62,10 +62,14 @@ const SettingsDialog: React.FC = () => {
       
       <DialogFooter>
         <DialogClose asChild>
-          <Button type="button" variant="simple" className="bg-white hover:bg-gray-100">Отмена</Button>
+          <Button type="button" variant="outline" className="border-gray-200 bg-white hover:bg-gray-100">
+            <span className="text-black">Отмена</span>
+          </Button>
         </DialogClose>
         <DialogClose asChild>
-          <Button type="button" onClick={handleSave} variant="green">Сохранить</Button>
+          <Button type="button" onClick={handleSave} variant="green">
+            <span className="text-black">Сохранить</span>
+          </Button>
         </DialogClose>
       </DialogFooter>
     </DialogContent>

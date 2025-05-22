@@ -77,31 +77,31 @@ const Sidebar: React.FC = () => {
       </div>
       
       <div className="flex-1 p-4 space-y-3">
-        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
+        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
           <FileText className="mr-2 h-5 w-5 text-green-600" />
-          Обзор
+          <span className="text-black">Обзор</span>
         </Button>
         
-        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleDelete}>
+        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleDelete}>
           <Trash2 className="mr-2 h-5 w-5 text-green-600" />
-          Удалить
+          <span className="text-black">Удалить</span>
         </Button>
         
-        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleImport}>
+        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleImport}>
           <Upload className="mr-2 h-5 w-5 text-green-600" />
-          Импорт
+          <span className="text-black">Импорт</span>
         </Button>
         
-        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleExport}>
+        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleExport}>
           <Download className="mr-2 h-5 w-5 text-green-600" />
-          Экспорт
+          <span className="text-black">Экспорт</span>
         </Button>
         
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
+            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
               <Plus className="mr-2 h-5 w-5 text-green-600" />
-              Добавить чек
+              <span className="text-black">Добавить чек</span>
             </Button>
           </DialogTrigger>
           <AddReceiptDialog />
@@ -111,9 +111,9 @@ const Sidebar: React.FC = () => {
       <div className="p-4 border-t border-gray-200">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
+            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
               <Settings className="mr-2 h-5 w-5 text-green-600" />
-              Настройки
+              <span className="text-black">Настройки</span>
             </Button>
           </DialogTrigger>
           <SettingsDialog />
