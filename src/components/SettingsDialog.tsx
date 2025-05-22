@@ -25,7 +25,7 @@ const SettingsDialog: React.FC = () => {
   };
   
   return (
-    <DialogContent className="sm:max-w-md">
+    <DialogContent className="sm:max-w-md bg-white">
       <DialogHeader>
         <DialogTitle>Настройки</DialogTitle>
       </DialogHeader>
@@ -40,9 +40,8 @@ const SettingsDialog: React.FC = () => {
               onChange={(e) => setTempOpenAIKey(e.target.value)}
               placeholder="Введите ваш API ключ OpenAI"
               type="password"
-              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             />
-            <div className="absolute h-0.5 w-0 bg-blue-500 bottom-0 left-0 transition-all group-focus-within:w-full"></div>
           </div>
         </div>
         
@@ -55,19 +54,18 @@ const SettingsDialog: React.FC = () => {
               onChange={(e) => setTempTelegramToken(e.target.value)}
               placeholder="Введите ваш Telegram Token"
               type="password"
-              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             />
-            <div className="absolute h-0.5 w-0 bg-blue-500 bottom-0 left-0 transition-all group-focus-within:w-full"></div>
           </div>
         </div>
       </div>
       
       <DialogFooter>
         <DialogClose asChild>
-          <Button type="button" variant="outline">Отмена</Button>
+          <Button type="button" variant="outline" className="border-gray-200 bg-white hover:bg-gray-100">Отмена</Button>
         </DialogClose>
         <DialogClose asChild>
-          <Button type="button" onClick={handleSave}>Сохранить</Button>
+          <Button type="button" onClick={handleSave} variant="green">Сохранить</Button>
         </DialogClose>
       </DialogFooter>
     </DialogContent>
