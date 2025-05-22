@@ -50,11 +50,21 @@ const AddReceiptDialog: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    addReceipt(activeTab, {
-      ...data,
+    // Make sure all required fields are present and explicitly typed
+    const newReceipt = {
+      serviceId: data.serviceId,
+      date: data.date,
+      time: data.time,
+      operator: data.operator,
+      application: data.application,
       amount: Number(data.amount),
       balance: Number(data.balance),
-    });
+      pc: data.pc,
+      p2p: data.p2p
+    };
+    
+    // Now pass the properly constructed object to addReceipt
+    addReceipt(activeTab, newReceipt);
     
     toast({
       title: "Receipt added",
