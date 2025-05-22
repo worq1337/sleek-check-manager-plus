@@ -1,10 +1,10 @@
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 type Theme = "light";
 
 type ThemeProviderProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 type ThemeProviderState = {
