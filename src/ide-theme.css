@@ -1,0 +1,110 @@
+
+/* IDE-like theme CSS */
+.ide-theme {
+  /* Terminal font */
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", "Courier New", monospace;
+  
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #4e5254 #2b2b2b;
+}
+
+.ide-theme ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.ide-theme ::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+.ide-theme ::-webkit-scrollbar-thumb {
+  background-color: #4e5254;
+  border-radius: 0;
+  border: 2px solid #2b2b2b;
+}
+
+.ide-theme ::-webkit-scrollbar-corner {
+  background: #2b2b2b;
+}
+
+/* Syntax highlighting colors similar to what you'd find in IDEs */
+.ide-theme .syntax-keyword { color: #cc7832; }
+.ide-theme .syntax-string { color: #6a8759; }
+.ide-theme .syntax-number { color: #6897bb; }
+.ide-theme .syntax-comment { color: #808080; }
+.ide-theme .syntax-function { color: #ffc66d; }
+.ide-theme .syntax-class { color: #a9b7c6; }
+.ide-theme .syntax-property { color: #9876aa; }
+
+/* Table headers to look like IDE tables */
+.ide-theme table th {
+  background-color: #3c3f41;
+  border-color: #1e1e1e;
+  font-weight: normal;
+  text-align: left;
+  padding: 4px 8px;
+}
+
+.ide-theme table td {
+  border-color: #323232;
+  padding: 2px 8px;
+}
+
+.ide-theme table tr:hover td {
+  background-color: #323232;
+}
+
+/* Make buttons look like IDE buttons */
+.ide-theme button.btn-ide {
+  background-color: #3c3f41;
+  border: 1px solid #1e1e1e;
+  color: #a9b7c6;
+  border-radius: 2px;
+  padding: 2px 12px;
+  font-size: 13px;
+}
+
+.ide-theme button.btn-ide:hover {
+  background-color: #4e5254;
+}
+
+.ide-theme button.btn-ide-primary {
+  background-color: #4675b8;
+  border: none;
+  color: white;
+}
+
+.ide-theme button.btn-ide-primary:hover {
+  background-color: #2d5186;
+}
+
+/* Tabs styling */
+.ide-theme .ide-tab {
+  background-color: #3c3f41;
+  border-bottom: 2px solid transparent;
+  color: #a9b7c6;
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.ide-theme .ide-tab[data-state="active"] {
+  background-color: #4e5254;
+  border-bottom-color: #4675b8;
+  color: white;
+}
+
+/* Make resizable panels look like IDE panels */
+.ide-theme [data-panel] {
+  background-color: #2b2b2b;
+}
+
+.ide-theme [data-panel-handle] {
+  background-color: #1e1e1e;
+  width: 2px;
+}
+
+.ide-theme [data-panel-handle]:hover,
+.ide-theme [data-panel-handle][data-state="active"] {
+  background-color: #4675b8;
+}
