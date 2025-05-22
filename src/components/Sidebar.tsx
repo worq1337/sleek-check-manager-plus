@@ -77,29 +77,29 @@ const Sidebar: React.FC = () => {
       </div>
       
       <div className="flex-1 p-4 space-y-3">
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
+        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
           <FileText className="mr-2 h-5 w-5 text-green-600" />
           Обзор
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleDelete}>
+        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleDelete}>
           <Trash2 className="mr-2 h-5 w-5 text-green-600" />
           Удалить
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleImport}>
+        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleImport}>
           <Upload className="mr-2 h-5 w-5 text-green-600" />
           Импорт
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleExport}>
+        <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleExport}>
           <Download className="mr-2 h-5 w-5 text-green-600" />
           Экспорт
         </Button>
         
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
+            <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
               <Plus className="mr-2 h-5 w-5 text-green-600" />
               Добавить чек
             </Button>
@@ -111,7 +111,7 @@ const Sidebar: React.FC = () => {
       <div className="p-4 border-t border-gray-200">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
+            <Button variant="simple" className="w-full justify-start text-left shadow-none border-none" size="lg">
               <Settings className="mr-2 h-5 w-5 text-green-600" />
               Настройки
             </Button>

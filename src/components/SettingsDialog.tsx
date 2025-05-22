@@ -62,7 +62,7 @@ const SettingsDialog: React.FC = () => {
       
       <DialogFooter>
         <DialogClose asChild>
-          <Button type="button" variant="outline" className="border-gray-200 bg-white hover:bg-gray-100">Отмена</Button>
+          <Button type="button" variant="simple" className="bg-white hover:bg-gray-100">Отмена</Button>
         </DialogClose>
         <DialogClose asChild>
           <Button type="button" onClick={handleSave} variant="green">Сохранить</Button>
