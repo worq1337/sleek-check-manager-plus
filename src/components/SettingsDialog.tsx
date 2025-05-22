@@ -25,9 +25,9 @@ const SettingsDialog: React.FC = () => {
   };
   
   return (
-    <DialogContent className="sm:max-w-md bg-white">
-      <DialogHeader>
-        <DialogTitle className="text-black">Настройки</DialogTitle>
+    <DialogContent className="sm:max-w-md bg-gray-100 border-2 border-gray-300">
+      <DialogHeader className="bg-blue-700 text-white p-2 -m-6 mb-4">
+        <DialogTitle className="text-white">Настройки</DialogTitle>
       </DialogHeader>
       
       <div className="py-4 space-y-4">
@@ -40,7 +40,7 @@ const SettingsDialog: React.FC = () => {
               onChange={(e) => setTempOpenAIKey(e.target.value)}
               placeholder="Введите ваш API ключ OpenAI"
               type="password"
-              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="border-gray-400"
             />
           </div>
         </div>
@@ -54,21 +54,21 @@ const SettingsDialog: React.FC = () => {
               onChange={(e) => setTempTelegramToken(e.target.value)}
               placeholder="Введите ваш Telegram Token"
               type="password"
-              className="transition-all focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="border-gray-400"
             />
           </div>
         </div>
       </div>
       
-      <DialogFooter>
+      <DialogFooter className="border-t border-gray-300 pt-2">
         <DialogClose asChild>
-          <Button type="button" variant="outline" className="border-gray-200 bg-white hover:bg-gray-100">
+          <Button type="button" variant="secondary" className="bg-gray-200 border border-gray-400 hover:bg-gray-300">
             <span className="text-black">Отмена</span>
           </Button>
         </DialogClose>
         <DialogClose asChild>
-          <Button type="button" onClick={handleSave} variant="green">
-            <span className="text-black">Сохранить</span>
+          <Button type="button" onClick={handleSave} className="bg-blue-700 hover:bg-blue-800 text-white">
+            <span>Сохранить</span>
           </Button>
         </DialogClose>
       </DialogFooter>

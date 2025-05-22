@@ -17,18 +17,18 @@ const ReceiptTable: React.FC = () => {
     <div className="w-full overflow-x-auto animate-fade-in">
       <Table>
         <TableHeader>
-          <TableRow className="bg-gray-50">
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">№</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Д.н</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Дата</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Время</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black">Оператор/продавец</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap text-black">Приложение</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black">Сумма</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black">Остаток</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">ПК</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">p2p</TableHead>
-            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Источник</TableHead>
+          <TableRow className="bg-gray-200">
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">№</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">Д.н</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">Дата</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">Время</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-left whitespace-nowrap text-black font-semibold">Оператор/продавец</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-left whitespace-nowrap text-black font-semibold">Приложение</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-right whitespace-nowrap text-black font-semibold">Сумма</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-right whitespace-nowrap text-black font-semibold">Остаток</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">ПК</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">p2p</TableHead>
+            <TableHead className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap text-black font-semibold">Источник</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -38,17 +38,17 @@ const ReceiptTable: React.FC = () => {
               onClick={() => handleRowClick(receipt.id)}
               className={`cursor-pointer hover:bg-gray-100 transition-colors ${selectedReceiptId === receipt.id ? 'bg-blue-100' : ''}`}
             >
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.id}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.serviceId}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.date}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.time}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.operator}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-left whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.application}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.amount.toLocaleString()}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.balance.toLocaleString()}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.pc}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.p2p}</TableCell>
-              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.source || "-"}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.id}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.serviceId}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.date}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.time}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-left whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.operator}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-left whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.application}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-right whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.amount.toLocaleString()}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-right whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.balance.toLocaleString()}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.pc}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.p2p}</TableCell>
+              <TableCell className="border border-gray-400 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.source || "-"}</TableCell>
             </TableRow>
           ))}
         </TableBody>

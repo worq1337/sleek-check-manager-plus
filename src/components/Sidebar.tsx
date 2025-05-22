@@ -71,36 +71,36 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white w-64 h-screen border-r border-gray-200 flex flex-col animate-fade-in">
-      <div className="p-4 border-b border-gray-200">
-        <h1 className="text-xl font-bold text-gray-800">Парсер чеков</h1>
+    <div className="bg-gray-200 w-64 h-screen border-r border-gray-300 flex flex-col shadow-md animate-fade-in">
+      <div className="p-3 border-b border-gray-300 bg-blue-700 text-white">
+        <h1 className="text-base font-medium">Меню</h1>
       </div>
       
-      <div className="flex-1 p-4 space-y-3">
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
-          <FileText className="mr-2 h-5 w-5 text-green-600" />
+      <div className="flex-1 p-2 space-y-1">
+        <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm">
+          <FileText className="mr-2 h-4 w-4 text-blue-600" />
           <span className="text-black">Обзор</span>
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleDelete}>
-          <Trash2 className="mr-2 h-5 w-5 text-green-600" />
+        <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm" onClick={handleDelete}>
+          <Trash2 className="mr-2 h-4 w-4 text-blue-600" />
           <span className="text-black">Удалить</span>
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleImport}>
-          <Upload className="mr-2 h-5 w-5 text-green-600" />
+        <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm" onClick={handleImport}>
+          <Upload className="mr-2 h-4 w-4 text-blue-600" />
           <span className="text-black">Импорт</span>
         </Button>
         
-        <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg" onClick={handleExport}>
-          <Download className="mr-2 h-5 w-5 text-green-600" />
+        <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm" onClick={handleExport}>
+          <Download className="mr-2 h-4 w-4 text-blue-600" />
           <span className="text-black">Экспорт</span>
         </Button>
         
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
-              <Plus className="mr-2 h-5 w-5 text-green-600" />
+            <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm">
+              <Plus className="mr-2 h-4 w-4 text-blue-600" />
               <span className="text-black">Добавить чек</span>
             </Button>
           </DialogTrigger>
@@ -108,11 +108,11 @@ const Sidebar: React.FC = () => {
         </Dialog>
       </div>
       
-      <div className="p-4 border-t border-gray-200">
+      <div className="p-2 border-t border-gray-300">
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="green" className="w-full justify-start text-left shadow-none border-none" size="lg">
-              <Settings className="mr-2 h-5 w-5 text-green-600" />
+            <Button variant="ghost" className="w-full justify-start text-left h-10 py-1" size="sm">
+              <Settings className="mr-2 h-4 w-4 text-blue-600" />
               <span className="text-black">Настройки</span>
             </Button>
           </DialogTrigger>
