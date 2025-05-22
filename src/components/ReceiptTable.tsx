@@ -4,7 +4,6 @@ import { useAppContext, Receipt, Tab } from '@/contexts/AppContext';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 import { ResizableHandle } from '@/components/ui/resizable';
 
-// Add a CSS class for resizable columns instead of using an inline style tag
 const ReceiptTable: React.FC = () => {
   const { activeTab, receipts, selectedReceiptId, setSelectedReceiptId } = useAppContext();
   
@@ -29,6 +28,7 @@ const ReceiptTable: React.FC = () => {
             <TableHead className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap text-black">Остаток</TableHead>
             <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">ПК</TableHead>
             <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">p2p</TableHead>
+            <TableHead className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap text-black">Источник</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -48,6 +48,7 @@ const ReceiptTable: React.FC = () => {
               <TableCell className="border border-gray-300 px-4 py-2 text-right whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.balance.toLocaleString()}</TableCell>
               <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.pc}</TableCell>
               <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.p2p}</TableCell>
+              <TableCell className="border border-gray-300 px-4 py-2 text-center whitespace-nowrap overflow-hidden text-ellipsis text-black">{receipt.source || "-"}</TableCell>
             </TableRow>
           ))}
         </TableBody>

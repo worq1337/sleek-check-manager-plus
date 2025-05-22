@@ -102,8 +102,8 @@
   
   /* Make table headers resizable */
   th {
-    resize: horizontal;
-    overflow: auto;
+    resize: horizontal !important;
+    overflow: auto !important;
     min-width: 100px;
     position: relative;
   }
@@ -121,6 +121,12 @@
   }
   
   th:hover::after {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Make resizing more visible and easier to grab */
+  th:active::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 8px;
   }
 }

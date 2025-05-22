@@ -26,6 +26,7 @@ const formSchema = z.object({
   }),
   pc: z.string().min(1, { message: "PC is required" }),
   p2p: z.enum(["Yes", "No"]),
+  source: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -46,6 +47,7 @@ const AddReceiptDialog: React.FC = () => {
       balance: "",
       pc: "",
       p2p: "No",
+      source: "",
     },
   });
 
@@ -60,7 +62,8 @@ const AddReceiptDialog: React.FC = () => {
       amount: Number(data.amount),
       balance: Number(data.balance),
       pc: data.pc,
-      p2p: data.p2p
+      p2p: data.p2p,
+      source: data.source || "-"
     };
     
     // Now pass the properly constructed object to addReceipt
@@ -88,9 +91,9 @@ const AddReceiptDialog: React.FC = () => {
               name="serviceId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Д.у</FormLabel>
+                  <FormLabel>Д.н</FormLabel>
                   <FormControl>
-                    <Input placeholder="Введите Д.у" {...field} />
+                    <Input placeholder="Введите Д.н" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -225,6 +228,20 @@ const AddReceiptDialog: React.FC = () => {
                       <FormLabel className="font-normal">Нет</FormLabel>
                     </FormItem>
                   </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="source"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Источник</FormLabel>
+                <FormControl>
+                  <Input placeholder="Введите источник" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
