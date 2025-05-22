@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
@@ -107,7 +106,7 @@ const AddReceiptDialog: React.FC = () => {
                 <FormItem>
                   <FormLabel>ПК</FormLabel>
                   <FormControl>
-                    <Input placeholder="Введите ПК" {...field} />
+                    <Input placeholder="Последние 4 цифры карты (например, 5849)" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
